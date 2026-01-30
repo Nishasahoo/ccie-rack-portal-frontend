@@ -1,0 +1,198 @@
+:root{
+  --timeColWidth: 92px;
+  --headRowHeight: 56px;
+  --hourRowHeight: 56px;
+
+  --cardRadius: 18px;
+  --shadow: 0 10px 26px rgba(0,0,0,.08);
+  --border: #e9e9e9;
+
+  --busyRed: #e63b3b;
+}
+
+.scPage{
+  padding: 20px 24px;
+  background: #f6f7fb;
+  min-height: 100vh;
+}
+
+.scHeader{ margin-bottom: 14px; }
+.scTitle{ font-size: 44px; margin: 0; }
+.scCrumb{ opacity: .7; margin-top: 4px; }
+
+.scShell{
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 18px;
+  align-items: start;
+}
+
+.scCard{
+  background: #fff;
+  border-radius: var(--cardRadius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.scToolbar{
+  display: grid;
+  grid-template-columns: 220px 1fr 180px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.scLeftTools{ display: flex; gap: 10px; align-items: center; }
+
+.scNavBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #101828;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.scTodayBtn{
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #eef2ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.scRange{
+  text-align: center;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.scViewToggle{ display: flex; justify-content: end; gap: 8px; }
+.scViewToggle button{
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+.scViewToggle button.active{
+  background: #101828;
+  color: #fff;
+}
+
+.scGridWrap{
+  position: relative;
+  overflow: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.scGrid{
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--timeColWidth) repeat(7, 1fr);
+  grid-auto-rows: var(--hourRowHeight);
+  background: #fff;
+  min-width: 980px;
+}
+
+/* header */
+.scHeadCell{
+  height: var(--headRowHeight);
+  line-height: var(--headRowHeight);
+  font-weight: 800;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* time column */
+.scTimeCell{
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid #f0f0f0;
+  padding: 18px 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  background: #fff;
+  color: #111;
+}
+
+/* cells */
+.scCell{
+  border-bottom: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+  background: #fff;
+  position: relative;
+}
+.scCell.isBusy{ cursor: not-allowed; }
+.scCell.isFree{ cursor: pointer; }
+.scCell.isFree:hover{ background: #f7faff; }
+
+/* ✅ smaller + button */
+.scPlus{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(37,99,235,.18);
+}
+.scPlus:hover{ filter: brightness(.97); }
+
+/* ✅ overlay is a GRID (not absolute blocks), so alignment is perfect */
+.scOverlayLayer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  grid-auto-rows: var(--hourRowHeight);
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ✅ red booking blocks: no rounding (so no gaps), full width of the day column */
+.scEventBlock{
+  background: var(--busyRed);
+  border-radius: 0;      /* IMPORTANT */
+  margin: 0;             /* IMPORTANT */
+  padding: 8px 10px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ✅ smaller font */
+.scEventTime{
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.scSide{
+  background: #fff;
+  border-radius: var(--cardRadius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}

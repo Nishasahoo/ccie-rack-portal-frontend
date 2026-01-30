@@ -1,0 +1,106 @@
+.mmCard {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  padding: 14px;
+}
+
+.mmTitle {
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.mmMonthRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mmMonthName {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.mmNav button {
+  border: 0;
+  width: 36px;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e9eef7;
+  font-weight: 900;
+}
+
+.mmGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.mmDow {
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+  font-weight: 800;
+  padding: 2px 0;
+}
+
+.mmDay {
+  border: 0;
+  background: transparent;
+  height: 36px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.mmDay:hover {
+  background: #f1f6ff;
+}
+
+.mmDay.muted {
+  opacity: 0.35;
+}
+
+.mmDay.selected {
+  outline: 2px solid #2a66ff;
+}
+
+.mmDay.mark-busy {
+  background: rgba(224, 48, 48, 0.16);
+  color: #b10000;
+}
+
+.mmDay.mark-pending {
+  background: rgba(242, 167, 0, 0.18);
+  color: #7a5300;
+}
+
+.mmDay.mark-reserved {
+  background: rgba(42, 102, 255, 0.16);
+  color: #0831b0;
+}
+
+.mmLegend {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.mDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.mDot.busy { background: #e03030; }
+.mDot.pending { background: #f2a700; }
+.mDot.reserved { background: #2a66ff; }

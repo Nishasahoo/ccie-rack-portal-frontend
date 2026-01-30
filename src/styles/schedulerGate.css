@@ -1,0 +1,203 @@
+/* whole page background like your screenshot */
+.sgPage {
+  min-height: 100vh;
+  background: #f4f6f8;
+  padding: 48px 24px 72px;
+}
+
+/* red busy banner */
+.sgBusyBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 44px;
+  font-weight: 800;
+  margin: 10px 0 24px;
+  color: #e40000;
+  text-shadow: 0 6px 14px rgba(228, 0, 0, 0.25);
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.sgBusyText {
+  color: #000;
+  font-weight: 800;
+}
+
+.sgNoIcon {
+  color: #e40000;
+}
+
+/* top heading (Cisco Security Scheduler) */
+.sgHeader {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+}
+
+.sgTitle {
+  font-size: 34px;
+  line-height: 1.05;
+  margin: 0 0 8px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.sgCrumb {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* big white card like your screenshot */
+.sgCard {
+  max-width: 600px;
+  margin: 18px auto 0;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 14px 40px rgba(17, 24, 39, 0.10);
+  padding: 28px;
+}
+
+.sgCardInner {
+  /* max-width: 300px; */
+  margin: 0 auto;
+}
+
+/* green bar */
+.sgGreenBar {
+  width: 100%;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.sgLoginHeading {
+  margin: 10px 0 8px;
+  /* font-size: 10px; */
+  font-weight: 900;
+  text-align: center;
+  color: #374151;
+}
+
+.sgPortalLink {
+  display: block;
+  text-align: center;
+  margin: 6px 0 22px;
+  font-weight: 800;
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.sgFormTitle {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  color: #374151;
+}
+
+/* form */
+.sgForm {
+  display: grid;
+  gap: 10px;
+}
+
+.sgLabel {
+  font-weight: 800;
+  color: #374151;
+  margin-top: 6px;
+}
+
+.sgInput {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 16px;
+  outline: none;
+}
+
+.sgInput:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.25);
+}
+
+.sgRadios {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.sgRadio {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #374151;
+  font-size: 18px;
+}
+
+/* error like your screenshot */
+.sgError {
+  margin-top: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 14px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.sgBtn {
+  margin-top: 14px;
+  width: 140px;
+  justify-self: center;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.sgBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.sgLinks {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+
+.sgLinks a {
+  color: #1a55ff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.sgOk {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #eaffea;
+  border: 1px solid #b9f0b9;
+  font-weight: 600;
+}
+.sgLinkBtn {
+  background: transparent;
+  border: none;
+  color: #1a55ff;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sgMuted {
+  color: #6b7280;
+}
