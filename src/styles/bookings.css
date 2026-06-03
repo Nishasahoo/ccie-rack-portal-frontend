@@ -1,0 +1,362 @@
+/* Bookings.css */
+
+.bookings-container {
+  padding: 30px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.bookings-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a2332;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bookings-count {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 12px 24px;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.count-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.count-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e8ecef;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Table Styles */
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bookings-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bookings-table thead tr th {
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.bookings-table tbody tr {
+  border-bottom: 1px solid #e8ecef;
+  transition: all 0.3s ease;
+}
+
+.bookings-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.bookings-table tbody tr:hover {
+  background-color: #f8f9fc;
+  transform: scale(1.01);
+}
+
+.bookings-table tbody td {
+  padding: 18px 20px;
+  font-size: 14px;
+  color: #4a5568;
+  border: none;
+  vertical-align: middle;
+}
+
+/* User Cell */
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.user-email {
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Course Badge */
+.course-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid #e2e8f0;
+}
+
+/* DateTime Cell */
+.datetime-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.datetime-icon {
+  font-size: 18px;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-reserved {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status-confirmed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-completed {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.status-cancelled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* No Data */
+.no-data {
+  text-align: center;
+  padding: 60px 20px !important;
+  color: #94a3b8;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .bookings-table thead tr th,
+  .bookings-table tbody td {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .user-avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .bookings-container {
+    padding: 20px 15px;
+  }
+
+  .bookings-title {
+    font-size: 24px;
+  }
+
+  .bookings-count {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  .bookings-table {
+    min-width: 800px;
+  }
+
+  .bookings-table thead tr th,
+  .bookings-table tbody td {
+    padding: 12px 14px;
+  }
+}
+
+/* Responsive Design - Small Mobile (Card View) */
+@media (max-width: 640px) {
+  .table-wrapper {
+    overflow-x: visible;
+  }
+
+  .bookings-table,
+  .bookings-table thead,
+  .bookings-table tbody,
+  .bookings-table th,
+  .bookings-table td,
+  .bookings-table tr {
+    display: block;
+  }
+
+  .bookings-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .bookings-table tbody tr {
+    margin-bottom: 20px;
+    border: 1px solid #e8ecef;
+    border-radius: 12px;
+    padding: 16px;
+    background: white;
+  }
+
+  .bookings-table tbody tr:hover {
+    transform: none;
+  }
+
+  .bookings-table tbody td {
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #f1f5f9;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .bookings-table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  .bookings-table tbody td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-right: 10px;
+    font-weight: 700;
+    color: #1a2332;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .user-cell {
+    justify-content: flex-end;
+  }
+
+  .course-badge {
+    display: inline-block;
+  }
+
+  .datetime-cell {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookings-container {
+    padding: 15px 10px;
+  }
+
+  .bookings-title {
+    font-size: 20px;
+  }
+
+  .bookings-count {
+    padding: 10px 20px;
+  }
+
+  .count-label {
+    font-size: 12px;
+  }
+
+  .count-value {
+    font-size: 18px;
+  }
+}

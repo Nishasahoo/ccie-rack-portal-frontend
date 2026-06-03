@@ -10,9 +10,9 @@ function isPhone(v = "") {
 }
 
 const LENGTH_OPTIONS = [
-  { label: "2 hours (120 mins)", minutes: 120, credits: 16 },
+  { label: "3 hours (180 mins)", minutes: 180, credits: 30 },
   { label: "4 hours (240 mins)", minutes: 240, credits: 30 },
-  { label: "8 hours (480 mins)", minutes: 480, credits: 55 },
+  { label: "8 hours (480 mins)", minutes: 480, credits: 60 },
 ];
 
 export default function ReservationModal({
@@ -86,7 +86,7 @@ export default function ReservationModal({
     setErr("");
 
     if (!startDate) return setErr("Start time missing. Please select a slot again.");
-    if (!form.rack) return setErr("Rack is required."); // ✅ NEW
+    if (!form.rack) return setErr("Rack is required."); // NEW
     if (!form.fullName.trim()) return setErr("Full name is required.");
     if (!isEmail(form.email)) return setErr("Enter a valid email.");
     if (!isPhone(form.phone)) return setErr("Enter a valid phone number.");
@@ -94,7 +94,7 @@ export default function ReservationModal({
     setLoading(true);
     try {
       await onSubmit({
-        rack: String(form.rack), // ✅ NEW
+        rack: String(form.rack), // NEW
         fullName: form.fullName.trim(),
         email: form.email.trim(),
         phone: form.phone.trim(),
@@ -123,7 +123,7 @@ export default function ReservationModal({
         </div>
 
         <div className="rmBody">
-          {/* ✅ Rack (REQUIRED) */}
+          {/* Rack (REQUIRED) */}
           <label className="rmLabel">Rack *</label>
           <select
             className="rmInput"

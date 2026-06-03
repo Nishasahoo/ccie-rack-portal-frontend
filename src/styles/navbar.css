@@ -1,3 +1,14 @@
+
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.data-discover{
+  color: rgb(0, 255, 217) !important;
+}
 .siteHeader {
   position: fixed;
   top: 0;
@@ -167,7 +178,7 @@
   background: #eaf2ff;
   color: #1d4ed8;
 }
-
+ 
 .megaHint {
   padding: 12px;
   color: #64748b;
@@ -328,4 +339,16 @@
   .brand {
     min-width: 0;
   }
+}
+
+.white-link {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.white-link:hover {
+  color: #f0f0f0; /* optional hover effect */
+}
+.My Credits{
+    color: #ffffff !important;
 }

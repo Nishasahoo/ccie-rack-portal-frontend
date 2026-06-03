@@ -89,30 +89,25 @@ export default function RegisterPage() {
       setLoading(false);
     }
   }
-
   /* ---------------- UI ---------------- */
-
   return (
     <div style={{ maxWidth: 520, margin: "40px auto" }}>
       <h1>Create account</h1>
       <p style={{ color: "#666" }}>
         After registration, admin approval may be required.
       </p>
-
       <form onSubmit={submit} style={{ display: "grid", gap: 12 }}>
         <input
           placeholder="Full name"
           value={form.fullName}
           onChange={(e) => setForm((s) => ({ ...s, fullName: e.target.value }))}
         />
-
         <input
           placeholder="Email"
           value={form.email}
           onChange={(e) => setForm((s) => ({ ...s, email: e.target.value }))}
           required
         />
-
         <input
           placeholder="Password"
           type="password"
@@ -120,13 +115,11 @@ export default function RegisterPage() {
           onChange={(e) => setForm((s) => ({ ...s, password: e.target.value }))}
           required
         />
-
         {error && (
           <div style={{ color: "crimson", background: "#ffecec", padding: 10 }}>
             {error}
           </div>
         )}
-
         <button disabled={loading}>
           {loading ? "Creating..." : "Create account"}
         </button>

@@ -1,35 +1,31 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/home.css";
-
-
-
-
+import '../styles/footer.css';
+import patchPanelImg from "../assets/tailwind-feat-whatisapatchpanel.webp";
+import aboutImg from "../assets/about-image.jpg";
+import equipment from "../assets/equipment.jpg";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [activeTab, setActiveTab] = useState(0);
 
 // const tracks = [
-//   { name: "EI",            version: "v1.1", icon: "🌐", to: "/scheduler-gate/cisco/ei" },
-//   { name: "Security",      version: "v6.1", icon: "🔒", to: "/scheduler-gate/cisco/security" },
+//   { name: "EI",version: "v1.1", icon: "🌐", to: "/scheduler-gate/cisco/ei" },
+//   { name: "Security", version: "v6.1", icon: "🔒", to: "/scheduler-gate/cisco/security" },
 //   { name: "Collaboration", version: "v3.1", icon: "📞", to: "/scheduler-gate/cisco/collaboration" },
-//   { name: "Wireless",      version: "v3.0", icon: "📡", to: "/scheduler-gate/cisco/wireless" },
-//   { name: "Data Center",   version: "v3.1", icon: "💾", to: "/scheduler-gate/cisco/datacenter" },
+//   { name: "Wireless", version: "v3.0", icon: "📡", to: "/scheduler-gate/cisco/wireless" },
+//   { name: "Data Center", version: "v3.1", icon: "💾", to: "/scheduler-gate/cisco/datacenter" },
 //   { name: "Service Provider", version: "v5.1", icon: "🔗", to: "/scheduler-gate/cisco/sp" },
 //   { name: "Fortinet NSE 8", version: "v8", icon: "🟥", to: "/scheduler-gate/fortinet/fcx" },
 // ];
-
-
 
 const tracks = [
   { name: "EI", version: "v1.1", icon: "🌐", to: "/ei-scheduler" },
   { name: "Security", version: "v6.1", icon: "🔒", to: "/security-scheduler" },
   { name: "Wireless", version: "v3.0", icon: "📡", to: "/wireless-scheduler" },
-  { name: "Data Center", version: "v3.1", icon: "💾", to: "/datacenter-scheduler" },
+  { name: "Data Center", version: "v3.1", icon: "💾", to: "/dc-scheduler" },
   { name: "Fortinet NSE 8", version: "v8", icon: "🟥", to: "/fcx-scheduler" },
 ];
-
-
 
   return (
     <div className="home">
@@ -92,12 +88,20 @@ const tracks = [
           <div className="heroVisual">
             <div className="visualCard">
               <div className="cardGlow"></div>
-              <img src="/assets/hero-person.png" alt="CCIE Expert" className="heroImg" />
+             <img
+             src={aboutImg}
+              alt="CCIE Expert"
+               style={{
+               width: "400px",
+               height: "300px",
+              objectFit: "cover"
+            }}
+             />
               <div className="floatingBadge badge1">
                 <div className="badgeIcon">📊</div>
                 <div className="badgeContent">
                   <div className="badgeLabel">Success Rate</div>
-                  <div className="badgeValue">98%</div>
+                  <div className="badgeValue">95%</div>
                 </div>
               </div>
               <div className="floatingBadge badge2">
@@ -163,15 +167,15 @@ const tracks = [
     );
   })}
 </div> */}
-<div className="tracksGrid">
-  {tracks.map((track, idx) => (
+   <div className="tracksGrid">
+   {tracks.map((track, idx) => (
     <div key={idx} className="trackCard">
       <div className="trackIcon">{track.icon}</div>
       <h3 className="trackName">{track.name}</h3>
       <p className="trackVersion">{track.version}</p>
     </div>
-  ))}
-</div>
+    ))}
+    </div>
 
         </div>
       </section>
@@ -196,7 +200,7 @@ const tracks = [
             </div>
             <div className="statDivider"></div>
             <div className="statItem">
-              <div className="statNumber">98%</div>
+              <div className="statNumber">95%</div>
               <div className="statLabel">Success Rate</div>
             </div>
           </div>
@@ -211,7 +215,12 @@ const tracks = [
               <div className="imageWrapper">
                 <div className="imageBg"></div>
               
-            <img src="/assets/about-image.jpg" alt="About" />
+           <img
+           src={patchPanelImg}
+           alt="CCIE Expert"
+           style={{ width: "600px", height: "auto" }}
+           />
+
                 <div className="imageOverlay">
                   <div className="overlayCard">
                     <div className="overlayIcon">🏆</div>
@@ -273,7 +282,6 @@ const tracks = [
                 Our data center houses the latest Cisco hardware, maintained to the highest standards. 
                 Every rack is configured to mirror real-world CCIE exam scenarios.
               </p>
-              
               <div className="equipmentFeatures">
                 <div className="equipFeature">
                   <div className="equipIcon">🔧</div>
@@ -298,24 +306,25 @@ const tracks = [
                 </div>
               </div>
             </div>
-            
             <div className="equipmentVisual">
               <div className="equipmentCard">
-                <img src="/assets/equipment.png" alt="Equipment" />
+               <img
+           src={equipment}
+          alt="CCIE Expert"
+           style={{ width: "600px", height: "auto", borderRadius: "20px" }}
+            />
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* HOW IT WORKS */}
       <section className="processSection">
         <div className="container">
           <div className="sectionHeader">
             <span className="sectionTag">Simple Process</span>
             <h2 className="sectionTitle">Get Started in 3 Easy Steps</h2>
-          </div>
-          
+          </div>          
           <div className="processSteps">
             <div className="processLine"></div>
             <div className="stepItem">
@@ -345,7 +354,6 @@ const tracks = [
           </div>
         </div>
       </section>
-
       {/* FEATURES GRID */}
       <section className="benefitsSection">
         <div className="container">
@@ -407,7 +415,6 @@ const tracks = [
                 </div>
               </div>
             </div>
-            
             <div className="testimonialCard featured">
               <div className="featuredBadge">Top Review</div>
               <div className="testimonialStars">★★★★★</div>
@@ -425,7 +432,6 @@ const tracks = [
                 </div>
               </div>
             </div>
-            
             <div className="testimonialCard">
               <div className="testimonialStars">★★★★★</div>
               <p className="testimonialText">
@@ -445,7 +451,6 @@ const tracks = [
           </div>
         </div>
       </section>
-
       {/* CTA SECTION */}
       <section className="ctaSection">
         <div className="container">
@@ -470,7 +475,6 @@ const tracks = [
       </section>
 
       {/* NEWSLETTER */}
-    
     </div>
   );
 }

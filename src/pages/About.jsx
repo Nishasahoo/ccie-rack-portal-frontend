@@ -38,7 +38,7 @@ export default function About() {
         {/* Image Section */}
         <section className="image-section">
           <img 
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=600&fit=crop" 
+            src="https://images.unsplash.com/photo-1598257006458-087169a1f08d?auto=format&fit=crop&w=1500&q=80" 
             alt="Professional woman on phone in office"
             className="hero-image"
           />

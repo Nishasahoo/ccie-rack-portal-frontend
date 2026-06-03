@@ -1,36 +1,77 @@
-.courseGrid{
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+.history-container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
 }
-.courseCard{
-  background:#fff;
-  border-radius:16px;
-  padding:16px;
-  box-shadow: 0 10px 30px rgba(2,6,23,.08);
-  border: 1px solid #e5e7eb;
-}
-.courseVendor{ font-weight:800; font-size:12px; color:#64748b; letter-spacing:.06em; }
-.courseName{ font-weight:800; font-size:18px; margin-top:6px; color:#0f172a; }
-.courseActions{ display:flex; gap:10px; margin-top:14px; }
 
-.secondaryBtn{
-  padding:10px 14px;
-  border-radius:12px;
-  border:1px solid #cbd5e1;
-  text-decoration:none;
-  color:#0f172a;
-  font-weight:700;
+.history-card {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
-.primaryBtn{
-  padding:10px 14px;
-  border-radius:12px;
-  background:#2563eb;
-  color:#fff;
-  text-decoration:none;
-  font-weight:800;
+
+.history-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-@media(max-width: 900px){
-  .courseGrid{ grid-template-columns: 1fr; }
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.history-table th {
+  background: #f3f4f6;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.history-table td {
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.history-table tr:hover {
+  background: #f9fafb;
+}
+
+.credit-positive {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.credit-negative {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.balance-box {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f9fafb;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.back-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 20px;
 }

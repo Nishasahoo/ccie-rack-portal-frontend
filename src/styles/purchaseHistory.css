@@ -1,0 +1,47 @@
+.history-wrapper {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.history-table th {
+  background: #f3f4f6;
+  padding: 12px;
+  text-align: left;
+}
+
+.history-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.credit-box {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.credit-box a {
+  margin-left: 10px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.credit-box a:hover {
+  text-decoration: underline;
+}
+
+.my-credits-link {
+  color: #ffffff !important;
+  text-decoration: none;
+}

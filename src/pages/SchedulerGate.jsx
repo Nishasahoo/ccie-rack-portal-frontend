@@ -54,7 +54,6 @@ export default function SchedulerGate() {
 
   useEffect(() => {
     if (!courseMeta) return;
-
     (async () => {
       try {
         // ✅ FIX: NO "/api" here
@@ -67,7 +66,6 @@ export default function SchedulerGate() {
             tzOffsetMinutes: new Date().getTimezoneOffset(),
           },
         });
-
         const racks = res.data?.busyRacks || res.data?.racks || res.data?.busy || [];
         setBusyRacks(Array.isArray(racks) ? racks : []);
       } catch {
@@ -121,7 +119,6 @@ export default function SchedulerGate() {
       setLoading(false);
     }
   };
-
   if (!courseMeta) {
     return (
       <div className="sgPage">
@@ -137,9 +134,7 @@ export default function SchedulerGate() {
       </div>
     );
   }
-
   const busyMsg = formatRackMessage(busyRacks);
-
   return (
     <div className="sgPage">
       {!!busyMsg && (
@@ -149,12 +144,10 @@ export default function SchedulerGate() {
           <span className="sgNoIcon">🚫</span>
         </div>
       )}
-
       <div className="sgHeader">
         <h1 className="sgTitle">{pageTitle}</h1>
         <div className="sgCrumb">{breadcrumb}</div>
       </div>
-
       <div className="sgCard">
         <div className="sgCardInner">
           <div className="sgLoginTop">

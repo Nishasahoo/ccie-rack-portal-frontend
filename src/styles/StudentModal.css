@@ -1,0 +1,116 @@
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.student-modal{
+  width:900px;
+  max-width:95%;
+  max-height:90vh;
+  overflow:auto;
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.close-btn{
+  border:none;
+  background:#ef4444;
+  color:white;
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.student-info{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-bottom:20px;
+}
+
+.booking-table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+  margin-bottom:20px;
+}
+
+.booking-table th{
+  background:#6366f1;
+  color:white;
+  padding:12px;
+  text-align:left;
+}
+
+.booking-table td{
+  border-bottom:1px solid #e5e7eb;
+  padding:12px;
+}
+
+.reject-btn {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reject-btn:hover {
+  background: #b91c1c;
+}
+
+
+.edit-btn{
+  background:#f59e0b;
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.edit-btn:hover{
+  opacity:.9;
+}
+
+.edit-modal{
+  background:#fff;
+  width:500px;
+  max-width:90%;
+  padding:25px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.edit-modal input,
+.edit-modal textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+.edit-actions{
+  display:flex;
+  gap:10px;
+}

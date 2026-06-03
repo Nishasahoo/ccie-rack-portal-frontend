@@ -28,7 +28,7 @@ export const COURSES = [
   },
   {
     vendor: "cisco",
-    slug: "datacenter-scheduler",
+    slug: "dc-scheduler",
     title: "CCIE Data Center",
     version: "v3.1",
     loginTitle: "Log into CCIE Data Center schedule",

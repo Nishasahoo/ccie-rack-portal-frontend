@@ -394,3 +394,50 @@
 }
 
 
+/* ===================================== */
+/* Rack Access Guide Title */
+/* ===================================== */
+.rackGuideTitle {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.rackGuideTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 85px;
+  height: 4px;
+  border-radius: 999px;
+  background: #0b5cff;
+}
+
+.rackGuideLink {
+  margin-top: 12px;
+  display: inline-block;
+  color: #0b5cff !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rackGuideLink:hover {
+  color: #0047d6 !important;
+}
+/* ===================================== */
+/* Mobile */
+/* ===================================== */
+
+@media (max-width: 640px) {
+  .rackGuideTitle {
+    font-size: 24px;
+  }
+
+  .rackGuideSub {
+    font-size: 14px;
+  }
+}

@@ -2,8 +2,8 @@
    RESET & BASE STYLES
 ============================================ */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px ;
+  padding: 0px ;
   box-sizing: border-box;
 }
 
@@ -93,7 +93,7 @@
   z-index: 2;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 120px 24px 80px;
+  padding: 50px 24px 50px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
@@ -290,7 +290,7 @@
 }
 
 .floatingBadge {
-  position: absolute;
+  /* position: absolute; */
   background: white;
   border-radius: 16px;
   padding: 16px;
@@ -1060,3 +1060,4 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+

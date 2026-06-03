@@ -49,12 +49,12 @@
   color:#0f172a;
 }
 
-.authInput{
-  padding:12px 12px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  outline:none;
-  font-size:14px;
+.authInput {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db; /* light gray */
+  outline: none;
+  font-size: 14px;
 }
 
 .authInput:focus{
@@ -63,8 +63,8 @@
 }
 
 .authBtn{
-  background: var(--blue);
-  color:white;
+  /* background: var(--blue); */
+  color:rgb(0, 0, 0);
   border:none;
   padding:12px 14px;
   border-radius:12px;

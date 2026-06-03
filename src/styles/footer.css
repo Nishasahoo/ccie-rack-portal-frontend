@@ -1,0 +1,258 @@
+/* Footer Styles */
+.footerWrapper {
+  background: linear-gradient(135deg, #0d2438 0%, #0d2438 100%);
+  color: #ffffff;
+  padding: 60px 20px 20px;
+}
+
+.footerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.5fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+/* Logo Column */
+.logoColumn {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logoIcon {
+  width: 120px;
+  height: 120px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+}
+
+.logoIcon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.logoIcon span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.logoSubtext {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Footer Columns */
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerHeading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #5dade2;
+  margin: 0 0 25px 0;
+  letter-spacing: 0.5px;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 12px;
+}
+
+.footerLinks a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  display: inline-block;
+}
+
+.footerLinks a:hover {
+  color: #5dade2;
+  padding-left: 5px;
+}
+
+/* Contact Info */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.contactItem:hover {
+  color: #5dade2;
+}
+
+.connectHeading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #5dade2;
+  margin: 0 0 15px 0;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #5dade2;
+  color: #0d2438;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  max-width: fit-content;
+}
+
+.whatsappBtn:hover {
+  background: #7ec8f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(93, 173, 226, 0.3);
+}
+
+/* Footer Bottom */
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footerBottom small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr 1.5fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .logoColumn {
+    grid-column: span 2;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerWrapper {
+    padding: 40px 20px 20px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .logoColumn {
+    grid-column: span 1;
+    justify-content: flex-start;
+  }
+
+  .logoIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logoIcon span {
+    font-size: 24px;
+  }
+
+  .logoSubtext {
+    font-size: 10px;
+  }
+
+  .footerHeading {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .whatsappBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerWrapper {
+    padding: 30px 15px 15px;
+  }
+
+  .footerContent {
+    gap: 30px;
+  }
+
+  .footerHeading {
+    font-size: 16px;
+  }
+
+  .footerLinks a,
+  .contactItem {
+    font-size: 14px;
+  }
+
+  .logoIcon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logoIcon span {
+    font-size: 20px;
+  }
+}
